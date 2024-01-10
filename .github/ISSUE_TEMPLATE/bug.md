@@ -3,7 +3,7 @@ name: Bug report
 about: Nice, you found a bug!
 title: ''
 labels: 'bug'
-assignees: 'shivammathur'
+assignees: 'mmuthigani'
 
 ---
 

@@ -24,14 +24,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shivammathur/setup-php.git"
+    "url": "git+https://github.com/mmuthigani/setup-php.git"
   },
   "keywords": [
     "actions",
     "php",
     "setup"
   ],
-  "author": "shivammathur",
+  "author": "mmuthigani",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.10.1",
@@ -59,7 +59,7 @@
     "typescript": "^5.3.2"
   },
   "bugs": {
-    "url": "https://github.com/shivammathur/setup-php/issues"
+    "url": "https://github.com/mmuthigani/setup-php/issues"
   },
   "simple-git-hooks": {
     "pre-commit": "npm run format && npm run lint && npm run test && npm run build && npm run release"

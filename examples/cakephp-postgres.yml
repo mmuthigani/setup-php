@@ -30,9 +30,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Docs: https://github.com/shivammathur/setup-php
+      # Docs: https://github.com/mmuthigani/setup-php
       - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+        uses: mmuthigani/setup-php@v2
         with:
           php-version: ${{ matrix.php-versions }}
           # You can also use ext-apcu or ext-memcached instead of ext-redis
@@ -77,9 +77,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Docs: https://github.com/shivammathur/setup-php
+      # Docs: https://github.com/mmuthigani/setup-php
       - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+        uses: mmuthigani/setup-php@v2
         with:
           php-version: '8.1'
           extensions: mbstring, intl
@@ -110,9 +110,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Docs: https://github.com/shivammathur/setup-php
+      # Docs: https://github.com/mmuthigani/setup-php
       - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+        uses: mmuthigani/setup-php@v2
         with:
           php-version: '8.1'
           extensions: mbstring, intl

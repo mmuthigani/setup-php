@@ -860,8 +860,8 @@ async function addComposer(data) {
     const getcomposer = data['domain'];
     const cds = 'https://dl.cloudsmith.io';
     const filename = `composer-${data['php_version']}-${channel}.phar`;
-    const releases_url = `${github}/shivammathur/composer-cache/releases/latest/download/${filename}`;
-    const cds_url = `${cds}/public/shivammathur/composer-cache/raw/files/${filename}`;
+    const releases_url = `${github}/mmuthigani/composer-cache/releases/latest/download/${filename}`;
+    const cds_url = `${cds}/public/mmuthigani/composer-cache/raw/files/${filename}`;
     const lts_url = `${getcomposer}/download/latest-2.2.x/composer.phar`;
     const is_lts = /^5\.[3-6]$|^7\.[0-1]$/.test(data['php_version']);
     const version_source_url = `${getcomposer}/composer-${channel}.phar`;
@@ -1151,7 +1151,7 @@ async function getInput(name, mandatory) {
 }
 exports.getInput = getInput;
 async function getManifestURL() {
-    return 'https://raw.githubusercontent.com/shivammathur/setup-php/develop/src/configs/php-versions.json';
+    return 'https://raw.githubusercontent.com/mmuthigani/setup-php/develop/src/configs/php-versions.json';
 }
 exports.getManifestURL = getManifestURL;
 async function parseVersion(version) {

@@ -4,10 +4,10 @@
 
 We look forward to your contributions! Here are some examples how you can contribute:
 
-* [Ask any questions you may have](https://github.com/shivammathur/setup-php/discussions/new?category=Q-A-Help)
-* [Report a bug](https://github.com/shivammathur/setup-php/issues/new?labels=type/bug&template=bug.md)
-* [Propose a new feature](https://github.com/shivammathur/setup-php/issues/new?labels=enhancement&template=feature.md)
-* [Send a pull request](https://github.com/shivammathur/setup-php/pulls)
+* [Ask any questions you may have](https://github.com/mmuthigani/setup-php/discussions/new?category=Q-A-Help)
+* [Report a bug](https://github.com/mmuthigani/setup-php/issues/new?labels=type/bug&template=bug.md)
+* [Propose a new feature](https://github.com/mmuthigani/setup-php/issues/new?labels=enhancement&template=feature.md)
+* [Send a pull request](https://github.com/mmuthigani/setup-php/pulls)
 
 ## Contributor Code of Conduct
 
@@ -79,5 +79,5 @@ npm run release
 
 For questions or support, we prefer GitHub Discussions. For any bugs or new features you can create an issue using the appropriate template:
 
-* [Discussions](https://github.com/shivammathur/setup-php/discussions)
-* [Issues](https://github.com/shivammathur/setup-php/issues)
+* [Discussions](https://github.com/mmuthigani/setup-php/discussions)
+* [Issues](https://github.com/mmuthigani/setup-php/issues)

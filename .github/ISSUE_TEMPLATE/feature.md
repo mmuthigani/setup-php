@@ -3,7 +3,7 @@ name: Feature request
 about: Suggest a new feature
 title: ''
 labels: 'enhancement'
-assignees: 'shivammathur'
+assignees: 'mmuthigani'
 
 ---
 

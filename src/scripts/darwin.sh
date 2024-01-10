@@ -3,7 +3,7 @@ disable_dependency_extensions() {
   local extension=$1
   formula_file="${tap_dir:?}/$ext_tap/Formula/$extension@${version:?}.rb"
   if [ -e "$formula_file" ]; then
-    IFS=" " read -r -a dependency_extensions <<< "$(grep -Eo "shivammathur.*@" "$formula_file" | xargs -I {} -n 1 basename '{}' | cut -d '@' -f 1 | tr '\n' ' ')"
+    IFS=" " read -r -a dependency_extensions <<< "$(grep -Eo "mmuthigani.*@" "$formula_file" | xargs -I {} -n 1 basename '{}' | cut -d '@' -f 1 | tr '\n' ' ')"
     for dependency_extension in "${dependency_extensions[@]}"; do
       sudo sed -Ei '' "/=(.*\/)?\"?$dependency_extension(.so)?$/d" "${ini_file:?}"
     done
@@ -37,7 +37,7 @@ get_extension_from_formula() {
 copy_brew_extensions() {
   local formula=$1
   formula_file="$tap_dir/$ext_tap/Formula/$formula@$version.rb"
-  deps="$(grep -Eo 'depends_on "shivammathur[^"]+' "$formula_file" | cut -d '/' -f 3 | tr '\n' ' ')"
+  deps="$(grep -Eo 'depends_on "mmuthigani[^"]+' "$formula_file" | cut -d '/' -f 3 | tr '\n' ' ')"
   IFS=' ' read -r -a deps <<< "$formula@$version $deps"
   for dependency in "${deps[@]}"; do
     extension_file="${brew_prefix:?}/opt/$dependency/$(get_extension_from_formula "${dependency%@*}").so"
@@ -48,7 +48,7 @@ copy_brew_extensions() {
   fi
 }
 
-# Function to install a php extension from shivammathur/extensions tap.
+# Function to install a php extension from mmuthigani/extensions tap.
 add_brew_extension() {
   formula=$1
   prefix=$2
@@ -262,10 +262,10 @@ setup_php() {
 version=${1:-'8.3'}
 ini=${2:-'production'}
 src=${0%/*}/..
-php_formula=shivammathur/php/php@"$version"
+php_formula=mmuthigani/php/php@"$version"
 scripts="$src"/scripts
-ext_tap=shivammathur/homebrew-extensions
-php_tap=shivammathur/homebrew-php
+ext_tap=mmuthigani/homebrew-extensions
+php_tap=mmuthigani/homebrew-php
 export HOMEBREW_CHANGE_ARCH_TO_ARM=1
 export HOMEBREW_DEVELOPER=1
 export HOMEBREW_NO_AUTO_UPDATE=1

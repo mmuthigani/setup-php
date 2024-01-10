@@ -7,8 +7,8 @@ export jit_versions="8.[0-9]"
 export nightly_versions="8.[3-9]"
 export xdebug3_versions="7.[2-4]|8.[0-9]"
 export latest="releases/latest/download"
-export github="https://github.com/shivammathur"
-export jsdeliver="https://cdn.jsdelivr.net/gh/shivammathur"
+export github="https://github.com/mmuthigani"
+export jsdeliver="https://cdn.jsdelivr.net/gh/mmuthigani"
 export setup_php="https://setup-php.com"
 
 if [ -n "${GITHUB_ACTIONS}" ]; then

@@ -49,7 +49,7 @@ export async function getInput(
  * Function to get manifest URL
  */
 export async function getManifestURL(): Promise<string> {
-  return 'https://raw.githubusercontent.com/shivammathur/setup-php/develop/src/configs/php-versions.json';
+  return 'https://raw.githubusercontent.com/mmuthigani/setup-php/develop/src/configs/php-versions.json';
 }
 
 /**

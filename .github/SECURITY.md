@@ -16,7 +16,7 @@ This security policy only applies to the latest patches of the following PHP ver
 
 ## Reporting a Vulnerability
 
-If you have found any issues that might have security implications in the versions supported, please send a report privately to [contact@shivammathur.com](mailto:contact@shivammathur.com).
+If you have found any issues that might have security implications in the versions supported, please send a report privately to [contact@mmuthigani.com](mailto:contact@mmuthigani.com).
 Do not report security reports publicly.
 
 ## Tidelift

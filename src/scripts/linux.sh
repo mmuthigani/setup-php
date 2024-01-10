@@ -99,7 +99,7 @@ add_devtools() {
   add_log "${tick:?}" "$tool" "Added $tool $semver"
 }
 
-# Function to setup the nightly build from shivammathur/php-builder
+# Function to setup the nightly build from mmuthigani/php-builder
 setup_nightly() {
   run_script "php-builder" "${runner:?}" "$version" "${debug:?}" "${ts:?}"
 }

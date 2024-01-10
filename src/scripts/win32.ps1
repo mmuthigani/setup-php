@@ -172,7 +172,7 @@ Function Add-Printf {
     if(Test-Path "C:\msys64\usr\bin\printf.exe") {
       New-Item -Path $bin_dir\printf.exe -ItemType SymbolicLink -Value C:\msys64\usr\bin\printf.exe -Force > $null 2>&1
     } else {
-      Get-File -Url "$github/shivammathur/printf/releases/latest/download/printf-x64.zip" -OutFile "$bin_dir\printf.zip"
+      Get-File -Url "$github/mmuthigani/printf/releases/latest/download/printf-x64.zip" -OutFile "$bin_dir\printf.zip"
       Expand-Archive -Path $bin_dir\printf.zip -DestinationPath $bin_dir -Force
     }
   } else {
@@ -257,7 +257,7 @@ Function Add-PhpConfig {
 Function Set-PhpCache {
   try {
     try {
-      $release = Invoke-RestMethod https://api.github.com/repos/shivammathur/php-builder-windows/releases/tags/php$version
+      $release = Invoke-RestMethod https://api.github.com/repos/mmuthigani/php-builder-windows/releases/tags/php$version
       $asset = $release.assets | ForEach-Object {
         if($_.name -match "php-$version.[0-9]+$env:PHPTS-Win32-.*-$arch.zip") {
           return $_.name
@@ -283,7 +283,7 @@ Function Set-PhpCache {
 Function Add-DebugSymbols {
   $dev = if ($version -match $nightly_versions) { '-dev' } else { '' }
   try {
-    $release = Invoke-RestMethod https://api.github.com/repos/shivammathur/php-builder-windows/releases/tags/php$version
+    $release = Invoke-RestMethod https://api.github.com/repos/mmuthigani/php-builder-windows/releases/tags/php$version
     $asset = $release.assets | ForEach-Object {
       if($_.name -match "php-debug-pack-$version.[0-9]+$dev$env:PHPTS-Win32-.*-$arch.zip") {
         return $_.name
@@ -304,7 +304,7 @@ Function Add-DebugSymbols {
 
 # Function to install nightly version of PHP
 Function Install-PhpNightly {
-  Get-File -Url $php_builder/releases/latest/download/Get-PhpNightly.ps1 -FallbackUrl https://dl.cloudsmith.io/public/shivammathur/php-builder-windows/raw/files/Get-PhpNightly.ps1 -OutFile $php_dir\Get-PhpNightly.ps1 > $null 2>&1
+  Get-File -Url $php_builder/releases/latest/download/Get-PhpNightly.ps1 -FallbackUrl https://dl.cloudsmith.io/public/mmuthigani/php-builder-windows/raw/files/Get-PhpNightly.ps1 -OutFile $php_dir\Get-PhpNightly.ps1 > $null 2>&1
   & $php_dir\Get-PhpNightly.ps1 -Architecture $arch -ThreadSafe $ts -Path $php_dir -Version $version > $null 2>&1
   if(Test-Path $php_dir\COMMIT) {
     return " ($( Get-Content $php_dir\COMMIT ))"
@@ -319,7 +319,7 @@ $php_dir = 'C:\tools\php'
 $ext_dir = "$php_dir\ext"
 $bin_dir = $php_dir
 $github = 'https://github.com'
-$php_builder = "$github/shivammathur/php-builder-windows"
+$php_builder = "$github/mmuthigani/php-builder-windows"
 $current_profile = "$env:TEMP\setup-php.ps1"
 $ProgressPreference = 'SilentlyContinue'
 $jit_versions = '8.[0-9]'

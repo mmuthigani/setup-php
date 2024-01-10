@@ -49,11 +49,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           registry-url: https://npm.pkg.github.com
-          scope: '@shivammathur'
+          scope: '@mmuthigani'
 
       - name: Patch package.json
         run: |
-          sed -i 's#"name": "#"name": "@shivammathur/#' package.json
+          sed -i 's#"name": "#"name": "@mmuthigani/#' package.json
 
       - name: Publish to GitHub Packages
         if: "!contains(github.event.inputs.skip, 'skip-github-packages')"
