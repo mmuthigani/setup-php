@@ -7,9 +7,9 @@
 <h1 align="center">Setup PHP in GitHub Actions</h1>
 
 <p align="center">
-  <a href="https://github.com/shivammathur/setup-php" title="GitHub action to setup PHP"><img alt="GitHub Actions status" src="https://github.com/shivammathur/setup-php/workflows/Main%20workflow/badge.svg"></a>
-  <a href="https://codecov.io/gh/shivammathur/setup-php" title="Code coverage"><img alt="Codecov Code Coverage" src="https://img.shields.io/codecov/c/github/shivammathur/setup-php?logo=codecov"></a>
-  <a href="https://github.com/shivammathur/setup-php/blob/main/LICENSE" title="license"><img alt="LICENSE" src="https://img.shields.io/badge/license-MIT-428f7e.svg?logo=open%20source%20initiative&logoColor=white&labelColor=555555"></a>
+  <a href="https://github.com/mmuthigani/setup-php" title="GitHub action to setup PHP"><img alt="GitHub Actions status" src="https://github.com/mmuthigani/setup-php/workflows/Main%20workflow/badge.svg"></a>
+  <a href="https://codecov.io/gh/mmuthigani/setup-php" title="Code coverage"><img alt="Codecov Code Coverage" src="https://img.shields.io/codecov/c/github/mmuthigani/setup-php?logo=codecov"></a>
+  <a href="https://github.com/mmuthigani/setup-php/blob/main/LICENSE" title="license"><img alt="LICENSE" src="https://img.shields.io/badge/license-MIT-428f7e.svg?logo=open%20source%20initiative&logoColor=white&labelColor=555555"></a>
   <a href="#tada-php-support" title="PHP Versions Supported"><img alt="PHP Versions Supported" src="https://img.shields.io/badge/php-5.3%20to%208.4-777bb3.svg?logo=php&logoColor=white&labelColor=555555"></a>
 </p>
 <p align="center">
@@ -131,7 +131,7 @@ PHP extensions can be set up using the `extensions` input. It accepts a `string`
 
 ```yaml
 - name: Setup PHP with PECL extension
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     extensions: imagick, swoole
@@ -141,7 +141,7 @@ PHP extensions can be set up using the `extensions` input. It accepts a `string`
 
 - On `macOS`, extensions available on `PECL` or a git repository can be set up.
 
-- On `Ubuntu` and `macOS` to compile and install an extension from a git repository follow this [guide](https://github.com/shivammathur/setup-php/wiki/Add-extension-from-source "Guide to compile and install PHP extensions in setup-php").
+- On `Ubuntu` and `macOS` to compile and install an extension from a git repository follow this [guide](https://github.com/mmuthigani/setup-php/wiki/Add-extension-from-source "Guide to compile and install PHP extensions in setup-php").
 
 - Extensions installed along with PHP if specified are enabled.
 
@@ -149,7 +149,7 @@ PHP extensions can be set up using the `extensions` input. It accepts a `string`
 
 ```yaml
 - name: Setup PHP with specific version of PECL extension
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '5.4'
     extensions: swoole-1.9.3
@@ -159,19 +159,19 @@ PHP extensions can be set up using the `extensions` input. It accepts a `string`
 
 ```yaml
 - name: Setup PHP with pre-release PECL extension
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     extensions: xdebug-beta
 ```
 
-- On `Ubuntu` and `macOS` to compile and install an extension from PECL with libraries or custom configuration follow this [guide](https://github.com/shivammathur/setup-php/wiki/Add-extension-from-PECL-with-libraries-and-custom-configuration "Guide to compile and install PHP extensions using PECL with libraries and custom configuration in setup-php").
+- On `Ubuntu` and `macOS` to compile and install an extension from PECL with libraries or custom configuration follow this [guide](https://github.com/mmuthigani/setup-php/wiki/Add-extension-from-PECL-with-libraries-and-custom-configuration "Guide to compile and install PHP extensions using PECL with libraries and custom configuration in setup-php").
 
 - Shared extensions can be disabled by prefixing them with a `:`. All extensions depending on the specified extension will also be disabled.
 
 ```yaml
 - name: Setup PHP and disable opcache
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     extensions: :opcache
@@ -183,23 +183,23 @@ PHP extensions can be set up using the `extensions` input. It accepts a `string`
 
 ```yaml
 - name: Setup PHP without any shared extensions except mbstring
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     extensions: none, mbstring
 ```
 
-- Extension `intl` can be set up with specific `ICU` version for `PHP 5.6` and above in `Ubuntu` workflows by suffixing `intl` with the `ICU` version. `ICU 50.2` and newer versions are supported. Refer to [`ICU builds`](https://github.com/shivammathur/icu-intl#icu4c-builds) for the specific versions supported.
+- Extension `intl` can be set up with specific `ICU` version for `PHP 5.6` and above in `Ubuntu` workflows by suffixing `intl` with the `ICU` version. `ICU 50.2` and newer versions are supported. Refer to [`ICU builds`](https://github.com/mmuthigani/icu-intl#icu4c-builds) for the specific versions supported.
 
 ```yaml
 - name: Setup PHP with intl
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     extensions: intl-70.1
 ```
 
-- Extensions loaded by default after `setup-php` runs can be found on the [wiki](https://github.com/shivammathur/setup-php/wiki).
+- Extensions loaded by default after `setup-php` runs can be found on the [wiki](https://github.com/mmuthigani/setup-php/wiki).
 
 - These extensions have custom support:
   - `cubrid` and `pdo_cubrid` on `Ubuntu`.
@@ -210,7 +210,7 @@ PHP extensions can be set up using the `extensions` input. It accepts a `string`
 
 ```yaml
 - name: Setup PHP with fail-fast
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     extensions: oci8
@@ -226,7 +226,7 @@ These tools can be set up globally using the `tools` input. It accepts a string 
 
 ```yaml
 - name: Setup PHP with tools
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     tools: php-cs-fixer, phpunit
@@ -236,7 +236,7 @@ These tools can be set up globally using the `tools` input. It accepts a string 
 
 ```yaml
 - name: Setup PHP with tools
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     tools: vimeo/psalm
@@ -251,12 +251,12 @@ These tools can be set up globally using the `tools` input. It accepts a string 
   
   When you specify just the major version or the version in `major.minor` format, the latest patch version matching the input will be setup. 
 
-  With the exception of major versions of `composer`, if you specify only the `major` version or the version in `major.minor` format for a tool you can get rate limited by GitHub's API. To avoid this, it is recommended to provide a [`GitHub` OAuth token](https://github.com/shivammathur/setup-php#composer-github-oauth "Composer GitHub OAuth").
+  With the exception of major versions of `composer`, if you specify only the `major` version or the version in `major.minor` format for a tool you can get rate limited by GitHub's API. To avoid this, it is recommended to provide a [`GitHub` OAuth token](https://github.com/mmuthigani/setup-php#composer-github-oauth "Composer GitHub OAuth").
   You can do that by setting `GITHUB_TOKEN` environment variable. The `COMPOSER_TOKEN` environment variable has been deprecated in favor of `GITHUB_TOKEN` and will be removed in the next major version.
 
 ```yaml
 - name: Setup PHP with tools
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     tools: php-cs-fixer:3.39, phpunit:10.4
@@ -268,7 +268,7 @@ These tools can be set up globally using the `tools` input. It accepts a string 
 
 ```yaml
 - name: Setup PHP with composer v2
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     tools: composer:v2
@@ -278,7 +278,7 @@ These tools can be set up globally using the `tools` input. It accepts a string 
 
 ```yaml
 - name: Setup PHP without composer
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     tools: none
@@ -294,7 +294,7 @@ These tools can be set up globally using the `tools` input. It accepts a string 
 
 ```yaml
 - name: Setup PHP with fail-fast
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     tools: deployer
@@ -317,7 +317,7 @@ Runs on all [PHP versions supported](#tada-php-support "List of PHP versions sup
 
 ```yaml
 - name: Setup PHP with Xdebug
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     coverage: xdebug
@@ -328,7 +328,7 @@ Runs on all [PHP versions supported](#tada-php-support "List of PHP versions sup
 
 ```yaml
 - name: Setup PHP with Xdebug 2.x
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '7.4'
     coverage: xdebug2
@@ -345,7 +345,7 @@ Runs on PHP 7.1 and newer PHP versions.
 
 ```yaml
 - name: Setup PHP with PCOV
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     ini-values: pcov.directory=api #optional, see above for usage.
@@ -375,7 +375,7 @@ Disable coverage for these reasons:
 
 ```yaml
 - name: Setup PHP with no coverage driver
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     coverage: none
@@ -452,7 +452,7 @@ On GitHub Actions you can assign the `setup-php` step an `id`, you can use the s
 ```yaml
 - name: Setup PHP
   id: setup-php
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
 
@@ -494,7 +494,7 @@ See below for more info.
 ```yaml
 steps:
 - name: Setup PHP
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     extensions: mbstring, intl
@@ -522,7 +522,7 @@ jobs:
             phpunit-versions: 9
     steps:
     - name: Setup PHP
-      uses: shivammathur/setup-php@v2
+      uses: mmuthigani/setup-php@v2
       with:
         php-version: ${{ matrix.php-versions }}
         extensions: mbstring, intl
@@ -543,7 +543,7 @@ jobs:
 ```yaml
 steps:
 - name: Setup nightly PHP
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.4'
     extensions: mbstring
@@ -562,7 +562,7 @@ steps:
 ```yaml
 steps:
 - name: Setup PHP with debugging symbols
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
   env:
@@ -584,7 +584,7 @@ jobs:
     name: Setup PHP TS
     steps:
     - name: Setup PHP
-      uses: shivammathur/setup-php@v2
+      uses: mmuthigani/setup-php@v2
       with:
         php-version: '8.3'
       env:
@@ -601,7 +601,7 @@ jobs:
 
 ```yaml
 - name: Setup PHP with latest versions
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
   env:
@@ -616,7 +616,7 @@ To debug any issues, you can use the `verbose` tag instead of `v2`.
 
 ```yaml
 - name: Setup PHP with logs
-  uses: shivammathur/setup-php@verbose
+  uses: mmuthigani/setup-php@verbose
   with:
     php-version: '8.3'
 ```
@@ -626,20 +626,20 @@ To debug any issues, you can use the `verbose` tag instead of `v2`.
 > Set up PHP on multiple architecture on Ubuntu GitHub Runners.
 
 - `PHP 5.6` to `PHP 8.3` are supported by `setup-php` on multiple architecture on `Ubuntu`.
-- For this, you can use `shivammathur/node` images as containers. These have compatible `Nodejs` installed for `setup-php`.
+- For this, you can use `mmuthigani/node` images as containers. These have compatible `Nodejs` installed for `setup-php`.
 - Currently, for `ARM` based setup, you will need [self-hosted runners](#self-hosted-setup).
 
 ```yaml
 jobs:
   run:
     runs-on: ubuntu-latest
-    container: shivammathur/node:latest-${{ matrix.arch }}
+    container: mmuthigani/node:latest-${{ matrix.arch }}
     strategy:
       matrix:
         arch: ["amd64", "i386"]
     steps:
       - name: Install PHP
-        uses: shivammathur/setup-php@v2
+        uses: mmuthigani/setup-php@v2
         with:
           php-version: '8.3'
 ```
@@ -649,10 +649,10 @@ jobs:
 > Set up PHP on a self-hosted runner.
 
 - To set up a containerised self-hosted runner, refer to the following guides as per your base operating system.
-  - [Linux](https://github.com/shivammathur/setup-php/wiki/Dockerized-self-hosted-runner-on-Linux)
-  - [Windows](https://github.com/shivammathur/setup-php/wiki/Dockerized-self-hosted-runner-on-Windows)
+  - [Linux](https://github.com/mmuthigani/setup-php/wiki/Dockerized-self-hosted-runner-on-Linux)
+  - [Windows](https://github.com/mmuthigani/setup-php/wiki/Dockerized-self-hosted-runner-on-Windows)
 
-- To set up the runner directly on the host OS or in a virtual machine, follow this [requirements guide](https://github.com/shivammathur/setup-php/wiki/Requirements-for-self-hosted-runners "Requirements guide for self-hosted runner to run setup-php") before setting up the self-hosted runner.
+- To set up the runner directly on the host OS or in a virtual machine, follow this [requirements guide](https://github.com/mmuthigani/setup-php/wiki/Requirements-for-self-hosted-runners "Requirements guide for self-hosted runner to run setup-php") before setting up the self-hosted runner.
 - If your workflow uses [service containers](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idservices "GitHub Actions Services"), then set up the runner on a Linux host or in a Linux virtual machine. GitHub Actions does not support nested virtualization on Linux, so services will not work in a dockerized container.
 
 It is recommended to specify the environment variable `runner` with the value `self-hosted` for self-hosted environments.
@@ -667,7 +667,7 @@ jobs:
     name: PHP ${{ matrix.php-versions }}
     steps:
     - name: Setup PHP
-      uses: shivammathur/setup-php@v2
+      uses: mmuthigani/setup-php@v2
       with:
         php-version: ${{ matrix.php-versions }}
       env:
@@ -689,24 +689,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Setup PHP
-      uses: shivammathur/setup-php@v2
+      uses: mmuthigani/setup-php@v2
       with:
         php-version: '8.3'
 ```
 
-Run the workflow locally with `act` using [`shivammathur/node`](https://github.com/shivammathur/node-docker "Docker image to run setup-php") docker images.
+Run the workflow locally with `act` using [`mmuthigani/node`](https://github.com/mmuthigani/node-docker "Docker image to run setup-php") docker images.
 
-Choose the image tag which matches the `runs-on` property in your workflow. For example, if you are using `ubuntu-20.04` in your workflow, run `act -P ubuntu-20.04=shivammathur/node:2004`.
+Choose the image tag which matches the `runs-on` property in your workflow. For example, if you are using `ubuntu-20.04` in your workflow, run `act -P ubuntu-20.04=mmuthigani/node:2004`.
 
 ```bash
 # For runs-on: ubuntu-latest
-act -P ubuntu-latest=shivammathur/node:latest
+act -P ubuntu-latest=mmuthigani/node:latest
 
 # For runs-on: ubuntu-22.04
-act -P ubuntu-22.04=shivammathur/node:2204
+act -P ubuntu-22.04=mmuthigani/node:2204
 
 # For runs-on: ubuntu-20.04
-act -P ubuntu-20.04=shivammathur/node:2004
+act -P ubuntu-20.04=mmuthigani/node:2004
 ```
 
 ### JIT Configuration
@@ -722,7 +722,7 @@ For example to enable JIT in `tracing` mode with buffer size of `64 MB`.
 
 ```yaml
 - name: Setup PHP with JIT in tracing mode
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     coverage: none
@@ -731,8 +731,8 @@ For example to enable JIT in `tracing` mode with buffer size of `64 MB`.
 
 ### Cache Extensions
 
-You can cache PHP extensions using `shivammathur/cache-extensions` and `action/cache` GitHub Actions. Extensions which take very long to set up when cached are available in the next workflow run and are enabled directly. This reduces the workflow execution time.  
-Refer to [`shivammathur/cache-extensions`](https://github.com/shivammathur/cache-extensions "GitHub Action to cache php extensions") for details.
+You can cache PHP extensions using `mmuthigani/cache-extensions` and `action/cache` GitHub Actions. Extensions which take very long to set up when cached are available in the next workflow run and are enabled directly. This reduces the workflow execution time.  
+Refer to [`mmuthigani/cache-extensions`](https://github.com/mmuthigani/cache-extensions "GitHub Action to cache php extensions") for details.
 
 ### Cache Composer Dependencies
 
@@ -775,7 +775,7 @@ The `COMPOSER_TOKEN` environment variable has been deprecated in favor of `GITHU
 
 ```yaml
 - name: Setup PHP
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
   env:
@@ -788,7 +788,7 @@ If you use Private Packagist for your private composer dependencies, you can set
 
 ```yaml
 - name: Setup PHP
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
   env:
@@ -802,7 +802,7 @@ Please refer to the authentication section in [`composer documentation`](https:/
 
 ```yaml
 - name: Setup PHP
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
   env:
@@ -825,7 +825,7 @@ Put the code in the run property of a step and specify the shell as `php {0}`.
 
 ```yaml
 - name: Setup PHP
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
 
@@ -865,7 +865,7 @@ PHPStan supports error reporting in GitHub Actions, so it does not require probl
 
 ```yaml
 - name: Setup PHP
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     tools: phpstan
@@ -880,7 +880,7 @@ Psalm supports error reporting in GitHub Actions with an output format `github`.
 
 ```yaml
 - name: Setup PHP
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     tools: psalm
@@ -898,7 +898,7 @@ For examples refer to the [cs2pr documentation](https://github.com/staabm/annota
 
 ```yaml
 - name: Setup PHP
-  uses: shivammathur/setup-php@v2
+  uses: mmuthigani/setup-php@v2
   with:
     php-version: '8.3'
     tools: cs2pr, phpcs
@@ -945,11 +945,11 @@ Examples of using `setup-php` with various PHP frameworks and packages.
 - A new major version of the action will only be tagged when there are breaking changes in the setup-php API i.e. inputs, outputs, and environment flags.
 - For debugging any issues `verbose` tag can be used temporarily. It outputs all the logs and is also synced with the latest releases.
 - It is highly discouraged to use the `main` branch as version, it might break your workflow after major releases as they have breaking changes.
-- If you are using the `v1` tag or a `1.x.y` version, you should [switch to v2](https://github.com/shivammathur/setup-php/wiki/Switch-to-v2 "Guide for switching from setup-php v1 to v2") as `v1` only gets critical bug fixes. Maintenance support for `v1` will be dropped with the last `PHP 8.0` release.
+- If you are using the `v1` tag or a `1.x.y` version, you should [switch to v2](https://github.com/mmuthigani/setup-php/wiki/Switch-to-v2 "Guide for switching from setup-php v1 to v2") as `v1` only gets critical bug fixes. Maintenance support for `v1` will be dropped with the last `PHP 8.0` release.
 
 ## :scroll: License
 
-- The scripts and documentation in this project are under the [MIT License](LICENSE "License for shivammathur/setup-php"). 
+- The scripts and documentation in this project are under the [MIT License](LICENSE "License for mmuthigani/setup-php"). 
 - This project has multiple [dependencies](#package-dependencies "Dependencies for this PHP Action"). Their licenses can be found in their respective repositories.
 - The logo for `setup-php` is a derivative work of [php.net logo](https://www.php.net/download-logos.php) and is licensed under the [CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/ "Creative Commons License").
 
@@ -957,13 +957,13 @@ Examples of using `setup-php` with various PHP frameworks and packages.
 
 > Contributions are welcome!
 
-- See [Contributor's Guide](.github/CONTRIBUTING.md "shivammathur/setup-php contribution guide") before you start.
-- If you face any issues or want to suggest a feature/improvement, start a discussion [here](https://github.com/shivammathur/setup-php/discussions "Setup PHP discussions").
+- See [Contributor's Guide](.github/CONTRIBUTING.md "mmuthigani/setup-php contribution guide") before you start.
+- If you face any issues or want to suggest a feature/improvement, start a discussion [here](https://github.com/mmuthigani/setup-php/discussions "Setup PHP discussions").
 
 *Contributors of `setup-php` and other related projects*
 
 <p align="center">
-  <a href="https://github.com/shivammathur/setup-php/graphs/contributors">
+  <a href="https://github.com/mmuthigani/setup-php/graphs/contributors">
     <img src="https://setup-php.com/contributors/?" alt="Contributors of setup-php and related projects" width="100%">
   </a>
 </p>
@@ -973,9 +973,9 @@ Examples of using `setup-php` with various PHP frameworks and packages.
 - Please star the project and share it. If you blog, please share your experience of using `setup-php`.
 - Please [reach out](mailto:contact@setup-php.com) if you have any questions about sponsoring setup-php.
 
-Many users and organisations support setup-php via [GitHub Sponsors](https://github.com/sponsors/shivammathur).
+Many users and organisations support setup-php via [GitHub Sponsors](https://github.com/sponsors/mmuthigani).
 
-<a href="https://github.com/sponsors/shivammathur"><img src="https://setup-php.com/sponsors.svg?" alt="Sponsor shivammathur"></a>
+<a href="https://github.com/sponsors/mmuthigani"><img src="https://setup-php.com/sponsors.svg?" alt="Sponsor mmuthigani"></a>
 
 These companies generously provide setup-php their products and services to aid in the development of this project.
 
@@ -1005,20 +1005,20 @@ These companies generously provide setup-php their products and services to aid 
 
 ## :package: Dependencies
 
-- [Node.js dependencies](https://github.com/shivammathur/setup-php/network/dependencies "Node.js dependencies")
+- [Node.js dependencies](https://github.com/mmuthigani/setup-php/network/dependencies "Node.js dependencies")
 - [aaronparker/VcRedist](https://github.com/aaronparker/VcRedist "VcRedist PowerShell package")
 - [mlocati/powershell-phpmanager](https://github.com/mlocati/powershell-phpmanager "Package to handle PHP on windows")
 - [ppa:ondrej/php](https://launchpad.net/~ondrej/+archive/ubuntu/php "Packaging active PHP packages")
-- [shivammathur/cache-extensions](https://github.com/shivammathur/cache-extensions "GitHub action to help with caching PHP extensions")
-- [shivammathur/composer-cache](https://github.com/shivammathur/composer-cache "Cache composer releases")
-- [shivammathur/homebrew-extensions](https://github.com/shivammathur/homebrew-extensions "Tap for PHP extensions on MacOS")
-- [shivammathur/homebrew-php](https://github.com/shivammathur/homebrew-php "Tap for PHP builds on MacOS")
-- [shivammathur/icu-intl](https://github.com/shivammathur/icu-intl "icu4c and php-intl builds")
-- [shivammathur/php-builder](https://github.com/shivammathur/php-builder "Nightly PHP package for Ubuntu")
-- [shivammathur/php-builder-windows](https://github.com/shivammathur/php-builder-windows "Nightly PHP package for Windows")
-- [shivammathur/php-ubuntu](https://github.com/shivammathur/php-ubuntu "Cache stable PHP Packages for Ubuntu")
-- [shivammathur/php5-darwin](https://github.com/shivammathur/php5-darwin "Scripts to set up PHP5 versions on darwin")
-- [shivammathur/php5-ubuntu](https://github.com/shivammathur/php5-ubuntu "Scripts to set up PHP5 versions on ubuntu")
+- [mmuthigani/cache-extensions](https://github.com/mmuthigani/cache-extensions "GitHub action to help with caching PHP extensions")
+- [mmuthigani/composer-cache](https://github.com/mmuthigani/composer-cache "Cache composer releases")
+- [mmuthigani/homebrew-extensions](https://github.com/mmuthigani/homebrew-extensions "Tap for PHP extensions on MacOS")
+- [mmuthigani/homebrew-php](https://github.com/mmuthigani/homebrew-php "Tap for PHP builds on MacOS")
+- [mmuthigani/icu-intl](https://github.com/mmuthigani/icu-intl "icu4c and php-intl builds")
+- [mmuthigani/php-builder](https://github.com/mmuthigani/php-builder "Nightly PHP package for Ubuntu")
+- [mmuthigani/php-builder-windows](https://github.com/mmuthigani/php-builder-windows "Nightly PHP package for Windows")
+- [mmuthigani/php-ubuntu](https://github.com/mmuthigani/php-ubuntu "Cache stable PHP Packages for Ubuntu")
+- [mmuthigani/php5-darwin](https://github.com/mmuthigani/php5-darwin "Scripts to set up PHP5 versions on darwin")
+- [mmuthigani/php5-ubuntu](https://github.com/mmuthigani/php5-ubuntu "Scripts to set up PHP5 versions on ubuntu")
 
 ## :bookmark_tabs: Further Reading
 
